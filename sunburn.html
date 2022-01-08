@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Evento</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@900&family=Pacifico&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script type="text/javascript">
+    var price;
+    function gt(selectObject)
+    {
+        price = selectObject.value;
+        txt1.value=price;
+    }
+    </script>
+    <style type="text/css">
+    .hero-image {
+  background-image: url("images/bg_images/sunburn_bg.jpg");
+  background-color: #cccccc;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+</style>
+</head>
+<body>
+   <div class="hero-image">
+  <section class="header">
+ 
+      <div class="detail" id="blur">
+      <div class="content">
+ 
+    <img src="images/event/sunburn.jpg" width="80%"  >
+     <a href="#" onclick="toggle()">READ MORE</a>
+</div>
+</div>
+<div id="popup">
+ <h3> Among the top 10 music festivals in the world the Sunburn Festival has been Asia’s a final music frontier for celebrating music and spreading groovy vibes in people with Electronic Dance Music.
+  Ranked by CNN in the year 2009, Sunburn Festival stood among the Top 10 major music festivals in the world. It started in the year 2007, at Candolim Beach in Goa. The festival created a lot of buzz since the time it started. It developed craze and stood as a trendsetter among youngsters and teenagers. The event brand began in Goa and expanded to Mumbai, Delhi, Bengaluru, Pune and more.
+  If you are a music lover, you need to get yourself to Asia’s premiere three day electronic dance and music event Goa Sunburn 2020! Sunburn is a synergy of music, entertainment, food, shopping and lifestyle that pulls music tourism in India. It is one of the most popular Goa festivals that attracts tourists from all over the world. </h3> 
+<a href="#" onclick="toggle()">close</a>
+</div>
+<script type="text/javascript">
+      function toggle(){
+      var blur = document.getElementById('blur');
+      blur.classList.toggle('active')
+       var popup = document.getElementById('popup');
+      popup.classList.toggle('active')
+    }
+    </script>
+  <div class="card">
+  <h1>SUNBURN</h1>
+  <form action="recipt.php" method="get">
+
+
+ <label> Select event:</label>  <br><br><SELECT name="event">
+  
+    <option value=" " > Select Your Package</option>
+    <option value="SULA"> SULA</option>
+    <option value=" TOMORROW">TOMORROW</option>
+    <option value="SUNBURN"> SUNBURN</option>
+
+ </SELECT>
+<br><br>
+     <label> Select Package:</label> <br><br> <select id="messi" onchange="gt(this)">
+    <option value=" " name="Package"> Select Your Package</option>
+    <option value="28000" name="Package"> Gold</option>
+    <option value=" 31000" name="Package"> Silver</option>
+    <option value="50000" name="Package"> Bronze</option>
+    </select> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+    <label> Package Cost:</label>&nbsp;&nbsp;&nbsp;
+    <input type="text" id="txt1" name="number1" required="" readonly="">
+    <br><br>
+    <label>Select Tickets</label>
+  <input type="number" id="points" name="number2" step="1" size="10" required="">
+    <br>
+ <p><input type="submit" name="submit"  value="Add Cart" > <a style="border-radius: 4px; background: white; text-decoration: none;outline: none; color: #E6A00B;padding: 10px 10px;" href="logout.php">log out</a></p>
+</form>
+
+
+</div>
+</div> 
+<h2>GALLARY</h2>
+<div class="container">
+<div class="box">
+   <img src="images/gallary2/6.jpg" width="100%">
+   <h3>Marshmello</h3>
+  </div>
+  <div class="box">
+    <img src="images/gallary2/2.jpg" width="100%">
+</div>
+<div class="box">
+    <img src="images/gallary2/4.jpg" width="100%">
+</div>
+<div class="box">
+    <img src="images/gallary2/3.jpg" width="100%">
+</div>
+<div class="box">
+    <img src="images/gallary2/5.jpg" width="100%">
+</div>
+<div class="box">
+    <img src="images/gallary2/1.jpg" width="100%">
+<h3>David Guetta </h3>
+</div>
+  </div>
+</div>
+</div>
+ 
+
+</body>
+
+</html>

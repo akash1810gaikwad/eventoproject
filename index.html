@@ -1,0 +1,423 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <title>Evento</title>
+	
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Evento</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">	
+	<link href="css/search.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+	<link href="css/nav.css" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/2372d57b0f.js" crossorigin="anonymous"></script>
+	 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	 <link rel="stylesheet" href="css/team.css">
+
+
+    <!--[if lt IE 9]>
+	    <script src="js/html5shiv.js"></script>
+	    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <style> 
+body{ 
+	text-align: center; 
+	background: #00ECB9; 
+font-family: sans-serif; 
+font-weight: 100; 
+} 
+h1{ 
+color: #396; 
+font-weight: 100; 
+font-size: 40px; 
+margin: 40px 0px 20px; 
+} 
+#clockdiv{ 
+	font-family: sans-serif; 
+	color: #fff; 
+	display: inline-block; 
+	font-weight: 100; 
+	text-align: center; 
+	font-size: 30px; 
+} 
+#clockdiv > div{ 
+	padding: 10px; 
+	border-radius: 3px; 
+	background: #00BF98; 
+	display: inline-block; 
+} 
+#clockdiv div > span{ 
+	padding: 15px; 
+	border-radius: 3px; 
+	background: #00816A; 
+	display: inline-block; 
+} 
+</style> 
+</head><!--/head-->
+
+<body >
+	 
+	 <nav>
+      <div class="menu-icon"><span class="fas fa-bars"></span></div>
+      <div class="logo">Evento</div>
+      <div class="nav-items">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#event">Event</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about_us.html">Team</a></li>
+        
+      </div>
+      <div class="search-icon"><span class="fas fa-search"></span></div>
+      <div class="cancel-icon"><span class="fas fa-times"></span></div>
+      <form action="registration.php">
+        <input type="search" class="search-data" placeholder="Search" required>
+        <button type="submit" class="fas fa-search"></button>
+      </form>
+    </nav>
+
+    <!--/#header--> 
+
+    <section id="home">	
+		<div id="main-slider" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#main-slider" data-slide-to="0" class="active"></li>
+				<li data-target="#main-slider" data-slide-to="1"></li>
+				<li data-target="#main-slider" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="item active">
+					<img class="img-responsive" src="images/slider/bg1.jpg" alt="slider">						
+					<div class="carousel-caption">
+						<h2>register for our next event </h2>
+						<h4>full event package only 20000rs</h4>
+						<a href="registration.php">GRAB YOUR TICKETS <i class="fa fa-angle-right"></i></a>
+					</div>
+				</div>
+				<div class="item">
+					<img class="img-responsive" src="images/slider/bg2.jpg" alt="slider">	
+					<div class="carousel-caption">
+						<h2>register for our next event </h2>
+						<h4>full event package only 28000rs</h4>
+						<a href="registration.php">GRAB YOUR TICKETS <i class="fa fa-angle-right"></i></a>
+					</div>
+				</div>
+				<div class="item">
+					<img class="img-responsive" src="images/slider/bg3.jpg" alt="slider">	
+					<div class="carousel-caption">
+						<h2>register for our next event </h2>
+						<h4>full event package only 38000rs</h4>
+						<a href="registration.php" >GRAB YOUR TICKETS <i class="fa fa-angle-right"></i></a>
+					</div>
+				</div>				
+			</div>
+		</div>    	
+    </section>
+	<!--/#home-->
+
+	<section id="explore">
+		<div class="container">
+			<div class="row">
+				<div class="watch">
+					<img class="img-responsive" src="images/watch.png" alt="" width="100%">
+				</div>				
+				<div class="col-md-4 col-md-offset-2 col-sm-5">
+					<h2>our next event in</h2>
+				</div>	
+				
+<div id="clockdiv"> 
+<div> 
+	<span class="days" id="day"></span> 
+	<div class="smalltext">Days</div> 
+</div> 
+<div> 
+	<span class="hours" id="hour"></span> 
+	<div class="smalltext">Hours</div> 
+</div> 
+<div> 
+	<span class="minutes" id="minute"></span> 
+	<div class="smalltext">Minutes</div> 
+</div> 
+<div> 
+	<span class="seconds" id="second"></span> 
+	<div class="smalltext">Seconds</div> 
+</div> 
+</div> 
+
+<p id="demo"></p> 
+
+<script> 
+
+var deadline = new Date(" june 31, 2021 15:37:25").getTime(); 
+
+var x = setInterval(function() { 
+
+var now = new Date().getTime(); 
+var t = deadline - now; 
+var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+document.getElementById("day").innerHTML =days ; 
+document.getElementById("hour").innerHTML =hours; 
+document.getElementById("minute").innerHTML = minutes; 
+document.getElementById("second").innerHTML =seconds; 
+if (t < 0) { 
+		clearInterval(x); 
+		document.getElementById("demo").innerHTML = "TIME UP"; 
+		document.getElementById("day").innerHTML ='0'; 
+		document.getElementById("hour").innerHTML ='0'; 
+		document.getElementById("minute").innerHTML ='0' ; 
+		document.getElementById("second").innerHTML = '0'; } 
+}, 1000); 		</script>	
+				
+			</div>
+			<div class="cart">
+				<a href="registration.php"><i class="fa fa-shopping-cart"></i> <span>Purchase Tickets</span></a>
+			</div>
+		</div>
+	</section><!--/#explore-->
+
+	<section id="event">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-9">
+					<div id="event-carousel" class="carousel slide" data-interval="false">
+						<h2 class="heading">THE ROCKING Performers</h2>
+						<div class="carousel-inner">
+							<div class="item active">
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="single-event">
+											<a href="registration.php">
+											<img class="img-responsive" src="images/event/martin.jpg" alt="event-image" width="100%">
+											<h4>Martin Garrix</h4>
+											<p style="color: black">
+                                              Martin Garrix’s career as an Electronic Dance Music (EDM) star began at 14</p>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event">
+											<a href="registration.php">
+											<img class="img-responsive" src="images/event/marshmellow.jpg" alt="event-image" width="100%">
+											<h4>Marshmello</h4>
+											<p style="color: black">Chris Comstock, better known by his stage name Marshmello.He is an American electronic dance music producer and DJ. </p>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event">
+											<a href="registration.php">
+											<img class="img-responsive" src="images/event/divine.jpg" alt="event-image" width="100%">
+											<h4>DIVINE</h4>
+											<p style="color: black">Vivian Fernandes, better known by his stage name DIVINE, is an Indian rapper from Mumbai, Maharashtra, India. He started to gain popularity after the release of his song Yeh Mera Bombay. He broke through with the release of his song Mere Gully Mein featuring fellow Mumbai rapper Naezy.
+</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="guitar">
+					<img class="img-responsive" src="images/guitar.png" alt="guitar">
+				</div>
+			</div>			
+		</div>
+	</section><!--/#event-->
+
+	<section id="about">
+		<div class="guitar2">				
+			<img class="img-responsive" src="images/guitar2.jpg" alt="guitar">
+		</div>
+		<div class="about-content" align="center">					
+					<h2 align="center" style="color: white;">About Evento</h2>
+					<p style="color: white;">EVENTO is an event booking website that empowers event book to plan and run music event and live concert with greater efficiency and impact.Book your tickets from here.Access the event from a microsite on your desktop or on any smart device and view all the information about the event in one place.This is a user friendly website.In this webiste you will find every detail about upcoming events.All you have to do go to the EVENTO website and you will get information about the event and you can buy tickets easily from here.</p>
+					<a href="about_us.html" class="btn btn-primary">View about us <i class="fa fa-angle-right"></i></a>
+				
+		</div>
+	</section><!--/#about-->
+	
+	<section id="twitter">
+		<div id="twitter-feed" class="carousel slide" data-interval="false">
+			<div class="twit">
+				<img class="img-responsive" src="images/twit.png" alt="twit">
+			</div>
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3">
+					<div class="text-center carousel-inner center-block">
+						<div class="item active">
+							<img src="images/12.jpg" alt="">
+							<p>Great things never came from comfort zone</p>
+							<a href="https://twitter.com/AkashGaikwad_17">https://twitter.com/AkashGaikwad_17 2 days ago</a>
+						</div>
+						<div class="item">
+							<img src="images/13.jpg" alt="">
+							<p>Belive in your self </p>
+							<a href="https://www.instagram.com/akash_mario/?hl=en">https://www.instagram.com/akash_mario/?hl=en 2 days ago</a>
+						</div>
+						<div class="item">
+							<img src="images/14.jpg" alt="">
+							<p>No music No life</p>
+							<a href="https://youtu.be/hvIg3PTJWxs">https://youtu.be/hvIg3PTJWxs 2 days ago</a>
+						</div>
+					</div>
+					<a class="twitter-control-left" href="#twitter-feed" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+					<a class="twitter-control-right" href="#twitter-feed" data-slide="next"><i class="fa fa-angle-right"></i></a>
+				</div>
+			</div>
+		</div>		
+	</section><!--/#twitter-feed-->
+	
+	<section id="sponsor">
+		<div id="sponsor-carousel" class="carousel slide" data-interval="false">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-10">
+						<h2>Sponsors</h2>			
+						<a class="sponsor-control-left" href="#sponsor-carousel" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+						<a class="sponsor-control-right" href="#sponsor-carousel" data-slide="next"><i class="fa fa-angle-right"></i></a>
+						<div class="carousel-inner">
+							<div class="item active">
+								<ul>
+									<li><a href="#"><img class="img-responsive" src="images/sponsor/sony.png" alt=""></a></li>&nbsp;&nbsp;
+									<li><a href="#"><img class="img-responsive" src="images/sponsor/wix.png" alt=""></a></li>&nbsp;&nbsp;
+									<li><a href="#"><img class="img-responsive" src="images/sponsor/paypal.png" alt=""></a></li>&nbsp;&nbsp;
+									<li><a href="#"><img class="img-responsive" src="images/sponsor/sponsor1.png" alt=""></a></li>&nbsp;&nbsp;
+									<li><a href="#"><img class="img-responsive" src="images/sponsor/fivver.png" alt=""></a></li>&nbsp;&nbsp;
+									<li><a href="#"><img class="img-responsive" src="images/sponsor/nike.png" alt=""></a></li>&nbsp;&nbsp;
+								</ul>
+							</div>
+							<div class="item">
+								<ul>
+									<li><a href="#"><img class="img-responsive" src="images/sponsor/sony.png" alt=""></a></li>&nbsp;&nbsp;
+									<li><a href="#"><img class="img-responsive" src="images/sponsor/fivver.png" alt=""></a></li>&nbsp;&nbsp;
+									<li><a href="#"><img class="img-responsive" src="images/sponsor/paypal.png" alt=""></a></li>&nbsp;&nbsp;
+									<li><a href="#"><img class="img-responsive" src="images/sponsor/wix.png" alt=""></a></li>&nbsp;&nbsp;
+									<li><a href="#"><img class="img-responsive" src="images/sponsor/sponsor1.png" alt=""></a></li>&nbsp;&nbsp;
+									<li><a href="#"><img class="img-responsive" src="images/sponsor/nike.png" alt=""></a></li>&nbsp;&nbsp;
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>				
+			</div>
+			<div class="light">
+				<img class="img-responsive" src="images/light.png" alt="">
+			</div>
+		</div>
+	</section><!--/#sponsor-->
+
+
+		<div class="contact-section">
+			<div class="ear-piece">
+				<img class="img-responsive" src="images/ear-piece.png" alt="">
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3 col-sm-offset-4">
+						<div class="contact-text">
+							<h3>Contact</h3>
+							<address>
+								E-mail: Evento1810@party.com<br>
+								Phone: (213) 484-6829<br>
+								Fax: +1 (123) 456 7891
+							</address>
+						</div>
+						<div class="contact-address">
+							<h3>Contact</h3>
+							<address>
+								 <strong>Evento</strong><br>
+
+                        ABC building,<br>
+                        Churchgate, Mumbai,<br> 
+                        Maharashtra 400020, India.
+							</address>
+						</div>
+					</div>
+					<div class="col-sm-5">
+						<div id="contact-section">
+							<h3>Send a message</h3>
+					    	<div class="status alert alert-success" style="display: none"></div>
+					    	<form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="compliants.php">
+					            <div class="form-group">
+					                <input type="text" name="first" class="form-control" required="required" placeholder="Name">
+					            </div>
+					            <div class="form-group">
+					                <input type="email" name="email" class="form-control" required="required" placeholder="Email ID">
+					            </div>
+					            <div class="form-group">
+					                <textarea name="problem" id="message" required="required" class="form-control" rows="4" placeholder="Enter your message"></textarea>
+					            </div>                        
+					            <div class="form-group">
+					                <button type="submit" class="btn btn-primary pull-right">Send</button>
+					            </div>
+					        </form>	       
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</section>
+    <!--/#contact-->
+
+    <footer id="footer">
+        <div class="container">
+            <div class="text-center">
+            	<div class="social-links">
+                                   <a href="https://www.facebook.com/profile.php?id=100004462036990"><span class="fa fa-facebook"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                   <a href="https://twitter.com/AkashGaikwad_17"><span class="fa fa-twitter"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                   <a href="https://www.instagram.com/akash_mario/?hl=en"><span class="fa fa-instagram"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                   <a href="https://youtu.be/hvIg3PTJWxs"><span class="fa fa-youtube"></span></a>
+                               </div>
+                <p> Copyright  &copy;2020<a target="_blank" href="index.html"> Evento </a>Theme. All Rights Reserved. <br> Designed by <a target="_blank" href="">Akash</a></p> 
+                <a href="Privacy_Policy.html">Privacy Policy</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Terms_and_Conditions.html">Terms and Conditions</a>             
+            </div>
+        </div>
+    </footer>
+    <!--/#footer-->
+    <script>
+    const menuBtn = document.querySelector(".menu-icon span");
+    const searchBtn = document.querySelector(".search-icon");
+    const cancelBtn = document.querySelector(".cancel-icon");
+    const items = document.querySelector(".nav-items");
+    const form = document.querySelector("form");
+    menuBtn.onclick = ()=>{
+      items.classList.add("active");
+      menuBtn.classList.add("hide");
+      searchBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+    }
+    cancelBtn.onclick = ()=>{
+      items.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      searchBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      form.classList.remove("active");
+      cancelBtn.style.color = "#ff3d00";
+    }
+    searchBtn.onclick = ()=>{
+      form.classList.add("active");
+      searchBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+    }
+  </script>
+  
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/smoothscroll.js"></script>
+    <script type="text/javascript" src="js/jquery.parallax.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollTo.js"></script>
+    <script type="text/javascript" src="js/main.js"></script> 
+</body>
+</html>

@@ -1,0 +1,53 @@
+h3{
+  
+  width: 280px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+font-family: 'Pacifico', cursive;
+font-family: 'Noto Sans SC', sans-serif;
+
+}
+
+
+
+.bounce:after{
+  content: '';
+  animation: changetext 10s infinite linear;
+  color: #00b894;
+
+}
+@keyframes changetext{
+  from,
+20%{content: "Evento";}
+ 40%{content: "sunburn";}
+  60%{content: "Tomorrow_land";}
+   80%{content: "untold";}
+   100%{content: "offer";}
+  }
+  address strong{
+    font-size: 40px;
+    font-weight: 500;
+    text-shadow: 2px 1px 5px black;
+    text-transform: uppercase;
+  }
+
+a{
+  border-radius: 4px;
+  background: black;
+  text-decoration: none;
+  outline: none;
+  color: #E6A00B ;
+  padding: 5px 10px;
+}
+a:hover
+{
+   color: white ;
+}
+
+
+
+
+
+

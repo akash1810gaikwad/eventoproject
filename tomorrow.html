@@ -1,0 +1,171 @@
+
+<html>
+<html>
+<head>
+    <title>Evento</title>
+    
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@900&family=Pacifico&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="css/gallary.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script type="text/javascript">
+    var price;
+    function gt(selectObject)
+    {
+        price = selectObject.value;
+        txt1.value=price;
+    }
+    </script>
+    <style type="text/css">
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: url("images/bg_images/tomorrow_bg.jpeg");
+  background-color: #cccccc;
+  height: 120%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#popup
+{
+  position: fixed;
+  top:40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 800px;
+  padding: 5px;
+  box-shadow: 0 5px 30px rgba(0,0,0,.30);
+  background: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+#popup.active
+{
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+    top:50%;
+}
+
+</style>
+</head>
+<body bgcolor="black" >
+
+  <div class="hero-image">
+ 
+  <section class="header">
+
+
+
+      <div class="detail" id="blur">
+      <div class="content">
+ 
+    <img src="images/event/tomorrow.jpg">
+
+
+     <a href="#" onclick="toggle()">READ MORE</a>
+</div>
+</div>
+<div id="popup">
+ <h3>Artfully designed stages, mind-blowing art shows, world-class food, and the very best DJ’s in the world place Belgium’s Tomorrowland in a class of its own. This is hands down one of the biggest and best EDM festivals on the planet, attracting over 1,000 DJs and thousands of music lovers from all corners of the globe to the small town of Boom.<br>
+Each July, the scenic De Schorre Park between Brussels and Antwerp morphs into a magical wonderland, complete with lovely natural scenery and sensational scenography . From dawn till dusk, its 16 stages are pumping with all kinds of electronic music, and Dreamville – the festival’s themed camping ground – is filled with cute little shops and delicious food stand</h3> 
+<a href="#" onclick="toggle()">close</a>
+</div>
+<script type="text/javascript">
+      function toggle(){
+      var blur = document.getElementById('blur');
+      blur.classList.toggle('active')
+       var popup = document.getElementById('popup');
+      popup.classList.toggle('active')
+    }
+    </script>
+
+
+  <div class="card">
+    
+<a href="sula.html" style="position: all; float: left;">Sula visit</a></p>
+<a href="sunburn.html">Sunburn visit</a></p>
+
+<h2 style="font-size: 30px; color: #88B04B;";>TOMORROW LAND</h2>
+  <form action="recipt.php" method="get">
+    <label> Select event:</label >  <br><br>
+    <SELECT name="event" >
+  <option value=" "> Select Your Package</option>
+    <option value="SULA"> SULA</option>
+    <option value=" TOMORROW">TOMORROW</option>
+    <option value="SUNBURN"> SUNBURN</option>
+ </SELECT>
+ <br><br>
+     <label> Select Package:</label><br><br>  <Select id="messi" onchange="gt(this)" name="package" >
+      <br>
+    <option value=" "> Select Your Package</option>
+    <option value="20000"> Gold</option>
+    <option value=" 30000 "> Silver</option>
+    <option value="40000"> Bronze</option>
+    </Select> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+    <label> Package Cost:</label>&nbsp;&nbsp;&nbsp;
+    <input type="text" id="txt1" name="number1" required="" readonly="">
+    <br><br>
+    <label>Select Tickets</label>
+     <input type="number" id="points" name="number2" step="1" size="10" required="">
+    <br><br>
+ <p><input type="submit" name="submit"  value="Add Cart" > <a style="border-radius: 4px; background: white; text-decoration: none;outline: none; color: #E6A00B;padding: 10px 10px;" href="logout.php">log out</a></p>
+
+ </form>
+</div>
+
+<br><br><br><br>
+
+
+<h2 align="center">GALLARY</h2>
+
+<div class="container">
+
+<div class="box">
+ 
+    <img src="images/gallary3/1.jpg" width="100%">
+<h3>Martin Garrix</h3>
+ 
+</div>
+
+<div class="box">
+  
+   <img src="images/gallary3/2.jpg" width="100%">
+
+</div>
+<div class="box">
+
+    <img src="images/gallary3/3.jpg" width="100%">
+
+
+ </div>
+ <div class="box">
+
+   <img src="images/gallary3/4.jpg" width="100%">
+
+
+ </div>
+ <div class="box">
+   <img src="images/gallary3/5.jpg" width="100%">
+
+
+ </div>
+ <div class="box">
+   <img src="images/gallary3/6.jpg" width="100%">
+<h3>Steve Aoki</h3>
+ </div>
+
+ </div>
+ </div>
+ </div>
+</body>
+
+</html>

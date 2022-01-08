@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Evento</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@900&family=Pacifico&display=swap" rel="stylesheet">
+
+  <link href="css/style.css" rel="stylesheet">
+  <script type="text/javascript">
+    var price;
+    function gt(selectObject)
+    {
+        price = selectObject.value;
+        txt1.value=price;
+    }
+    </script>
+    <style type="text/css">
+    .hero-image {
+  background-image: url("images/bg_images/sula_bg.JPG");
+  background-color: #cccccc;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+</style>
+</head>
+<body >
+     <div class="hero-image">
+  <section class="header">
+ 
+ 
+      <div class="detail" id="blur">
+      <div class="content">
+ 
+    <img src="images/event/sula.jpg" width="100%" >
+     <a href="#" onclick="toggle()">READ MORE</a>
+</div>
+</div>
+<div id="popup">
+ <h3>SulaFest is India’s biggest vineyard music festival, to be held on 1st & 2nd February, 2020. We fill up the weekend with new and interesting music from across the globe, delectable wines, gourmet food and merchandise from some of the loveliest brands.
+If all this sounds good already, wait until you hear where SulaFest takes place. Set in Sula’s vineyards in Nashik – the wine capital of India – our festival is propped against the backdrop of rolling hills and surrounded by the calm of the Gangapur lake.
+At SulaFest 2020, we celebrate our 13th year as a festival and this year we’re going all out a.k.a throwing in some mega surprises for you and your crew. To celebrate, we have a list of wine experiences to pick from, grape stomping to get knee-deep into, wine master classes and more! But we aren’t just stopping there. We are a music festival after all, and this year we’ve got a host of national and international bands and artists bringing their magic to the main stage. While you’re here, we’ll let you in on a little secret. Headlining SulaFest 2020 is British-band Hot Chip, who will be playing in India for the first time!
+And if you’re still looking for more adventure, you can camp at our campsite and allow nature’s music to put you to sleep.
+Finally, for every ticket sold, Sula Vineyards will plant a tree on your behalf, making it India’s first sustainable music festival.
+
+What’re you waiting for? Book your tickets today</h3> 
+<a href="#" onclick="toggle()">close</a>
+</div>
+<script type="text/javascript">
+      function toggle(){
+      var blur = document.getElementById('blur');
+      blur.classList.toggle('active')
+       var popup = document.getElementById('popup');
+      popup.classList.toggle('active')
+    }
+    </script>
+  <div class="card">
+  <h1>SULA FEST</h1>
+
+  <form action="recipt.php" method="get">
+    <label> Select event:</label>  
+    <br><br>
+    <SELECT name="event">
+  
+    <option value=" "> Select Your Package</option>
+    <option value="SULA"> SULA</option>
+    <option value=" TOMORROW">TOMORROW</option>
+    <option value="SUNBURN"> SUNBURN</option>
+
+ </SELECT>
+ <br><br>
+     <label> Select Package:</label>  <br><br><select id="messi" onchange="gt(this)">
+    <option value=" "> Select Your Package</option>
+    <option value="38000"> Gold</option>
+    <option value=" 40000 "> Silver</option>
+    <option value="48000"> Bronze</option>
+    </select> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+    <label> Package Cost:</label>&nbsp;&nbsp;&nbsp;
+    <input type="text" id="txt1" name="number1" required="" readonly="">
+    <br><br>
+    <label>Select Tickets</label>
+     <input type="number" id="points" name="number2" step="1" size="10">
+    <br><br>
+ <p><input type="submit" name="submit"  value="Add Cart" required=""> <a style="border-radius: 4px; background: white; text-decoration: none;outline: none; color: #E6A00B;padding: 10px 10px;" href="logout.php">log out</a></p>
+</form>
+
+
+</div>
+</div> 
+<h1 align="center" style="color: black">GALLARY</h1>
+
+
+
+<div class="container">
+
+<div class="box">
+ 
+    <img src="images/gallary/6.jpg" width="100%">
+</div>
+
+<div class="box">
+  
+   <img src="images/gallary/1.jpg" width="100%">
+ <h2> Divine</h2>
+ 
+</div>
+<div class="box">
+
+    <img src="images/gallary/3.jpg" width="100%">
+
+
+ </div>
+ <div class="box">
+
+   <img src="images/gallary/4.jpg" width="100%">
+
+
+ </div>
+ <div class="box">
+   <img src="images/gallary/5.jpg" width="100%"> 
+
+
+ </div>
+ <div class="box">
+   <img src="images/gallary/2.jpg" width="100%">
+<h3>Arijit Malik</h3>
+ </div>
+
+ </div>
+ </div>
+ </div>
+</body>
+
+</html>
